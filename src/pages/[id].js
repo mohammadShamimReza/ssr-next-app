@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import React from "react";
 
+// try { } catch (err) { console.log(err)}
 export async function getStaticPaths() {
   console.log(id);
   const res = await fetch(
@@ -31,9 +32,10 @@ export async function getStaticProps(context) {
 
 function id({ data }) {
   console.log(data);
+  const entity = data.data.attributes;
   return (
     <div>
-      <h1>Entity id is </h1>
+      <h1>{entity.title} </h1>
     </div>
   );
 }
