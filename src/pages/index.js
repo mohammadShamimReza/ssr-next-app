@@ -14,10 +14,6 @@ export async function getServerSideProps(context) {
 }
 
 export default function Home({ data }) {
-  const [first, setfirst] = useState("");
-
-  console.log(first);
-
   return (
     <>
       <main>
